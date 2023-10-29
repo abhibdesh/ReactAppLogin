@@ -9,7 +9,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from 'react-router-dom';
 
 
@@ -49,7 +48,7 @@ function App() {
       <Routes>
       <Route path="/about" element={<About />} />
           <Route path="/" element={ <><Logo id="logoo"/>
-<TextForm heading="Enter the text to analyze below" onShowAlert={showAlert}/></>     } />
+<TextForm heading="Login" onShowAlert={showAlert}/></>     } />
       </Routes>
      
     </Router>

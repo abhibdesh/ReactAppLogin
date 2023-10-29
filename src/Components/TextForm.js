@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 
 
@@ -7,9 +8,6 @@ export default function TextForm(props) {
     const [Username, setText] = useState("");
     const UserNameOnchange =(event) =>{
             setText(event.target.value.toUpperCase())
-    }
-    const Validate = () =>{
-        alert("asdgh")
     }
   return (
     <div className={`col-lg-12 col-sm-12 col-xl-12 form-check form-switch text-${
@@ -46,13 +44,12 @@ export default function TextForm(props) {
         </div>
       </div>
       <div className="row">
-        <input
+        <Link
           type="button"
           className="btn btn-primary"
-          value={props.btnVal}
           id="btnSubmit"
-          onClick={Validate}
-        ></input>
+          to="/about"
+        >{props.btnVal}</Link>
       </div>
     </div>
   </div>
